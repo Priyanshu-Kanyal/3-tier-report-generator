@@ -1,0 +1,23 @@
+{
+  "name": "backend-cpp-render",
+  "version-string": "1.0.0",
+  "description": "C++ High Performance Report Rendering Microservice",
+  "dependencies": [
+    {
+      "name": "nlohmann-json",
+      "version>=": "3.10.0"
+    },
+    {
+      "name": "cpp-httplib",
+      "version>=": "0.12.0"
+    },
+    {
+      "name": "libharu",
+      "version>=": "2.3.0"
+    },
+    {
+      "name": "libxlsxwriter",
+      "version>=": "1.1.4"
+    }
+  ]
+}

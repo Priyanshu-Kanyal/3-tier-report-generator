@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Renovate configuration for 3-Tier Report Generator upgrade practice",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "description": "Group Angular frontend dependencies together",
+      "matchPackagePatterns": ["^@angular/", "^rxjs", "^zone\\.js"],
+      "groupName": "angular monorepo"
+    },
+    {
+      "description": "Group Spring Boot and Java middleware dependencies",
+      "matchPackagePatterns": ["^org\\.springframework\\.boot", "^org\\.springdoc", "^org\\.postgresql"],
+      "groupName": "spring-boot dependencies"
+    },
+    {
+      "description": "C++ rendering service native dependencies",
+      "matchPackagePatterns": ["nlohmann-json", "cpp-httplib", "libharu", "libxlsxwriter"],
+      "groupName": "cpp libraries"
+    }
+  ],
+  "enabledManagers": [
+    "npm",
+    "maven",
+    "vcpkg",
+    "conan"
+  ],
+  "rangeStrategy": "bump",
+  "rebaseWhen": "auto",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5
+}

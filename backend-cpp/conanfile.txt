@@ -1,0 +1,9 @@
+[requires]
+nlohmann_json/3.10.0
+cpp-httplib/0.12.0
+libharu/2.3.0
+libxlsxwriter/1.1.4
+
+[generators]
+CMakeDeps
+CMakeToolchain
